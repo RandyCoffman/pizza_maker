@@ -13,6 +13,6 @@ puts "Okay, I will make you #{pizzas} pizzas"
 
 pizza = 1
 while pizza <= pizzas do
-	p "Your crust will be #{crust.sample}, meat will be #{meats.sample}, veggies will be #{veggies.sample}, special toppings will be #{special_toppings.sample}, sauce is #{sauces.sample}, and the extras are #{extra.sample}" 
-	pizza +=1
+	p "Your crust will be #{crust.sample}, meat is #{meats.sample}, veggies are #{veggies.sample}, special toppings are #{special_toppings.sample}, sauce is #{sauces.sample}, and #{extra.sample}." 
+	pizza += 1
 end
