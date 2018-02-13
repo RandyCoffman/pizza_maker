@@ -13,11 +13,11 @@ puts "Okay, I will make you #{pizzas} pizzas"
 
 pizza = 1
 while pizza <= pizzas do
-	p "pizza"
+	p pizza
 	p "Your crust will be #{crust.sample}, meat is #{meats.sample}, veggies are #{veggies.sample}, special toppings are #{special_toppings.sample}, sauce is #{sauces.sample}, and #{extra.sample}." 
 	pizza += 1
 end
 
-total_cost = 11.70 * pizzas 
+total_cost = 11.70 * pizzas
 
 puts "The total cost will be $#{total_cost}"
