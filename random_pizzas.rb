@@ -141,9 +141,10 @@ tip_input = gets.chomp.to_f
 
 tip_percent = tip_input / 100
 tip = bill * tip_percent
-total = fee + bill + tip
-
+total = fee + bill + tip + tax
+tax = bill * 0.06 
 puts "The total cost will be $#{total}"
+puts "your tax will be $#{tax}"
 puts "Your tip was $#{tip}"
 puts "Your delivery fee was $#{fee}"
 puts "Then the orignal cost was $#{bill}"
