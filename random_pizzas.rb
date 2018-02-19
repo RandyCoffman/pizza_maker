@@ -99,29 +99,31 @@ def extra_top_cost_calc(extra_toppings)
 		return 1
 	else 
 		return 3
+		end
 	end
-end
 
-cost = 0.0
+	puts "How many pizzas would you like to order?"
+	pizzas = gets.chomp.to_i 
 
-puts "How many pizzas would you like to order?"
-pizzas = gets.chomp.to_i 
+	puts "Okay, I will make you #{pizzas} pizzas"
 
-puts "Okay, I will make you #{pizzas} pizzas"
+	cost = []
 
-for pizza in 1..pizzas 
-	pizza_size = size.sample
-	crust_type = crust.sample
-	meat_type = meats.sample
-	veggie_type = veggies.sample
-	sauce_type = sauces.sample
-	extra_top_type = extra_toppings.sample
-	spec_top_type = special_toppings.sample
-	puts "This is pizza ##{pizza}."
-	puts "#{pizza_size}, #{crust_type}, #{meat_type}, #{veggie_type}, #{sauce_type}, #{spec_top_type}, #{extra_top_type}"
-	bill = cost + crust_cost_calc(crust_type) + sauce_cost_calc(sauce_type) + veggies_cost_calc(veggie_type) + meats_cost_calc(meat_type) + size_cost_calc(pizza_size) + extra_top_cost_calc(extra_top_type) + special_top_cost_calc(spec_top_type)
-	puts bill
-end
+	for pizza in 1..pizzas 
+		pizza_size = size.sample
+		crust_type = crust.sample
+		meat_type = meats.sample
+		veggie_type = veggies.sample
+		sauce_type = sauces.sample
+		extra_top_type = extra_toppings.sample
+		spec_top_type = special_toppings.sample
+		puts "This is pizza ##{pizza}."
+		puts "#{pizza_size}, #{crust_type}, #{meat_type}, #{veggie_type}, #{sauce_type}, #{spec_top_type}, #{extra_top_type}"
+		bill = crust_cost_calc(crust_type) + sauce_cost_calc(sauce_type) + veggies_cost_calc(veggie_type) + meats_cost_calc(meat_type) + size_cost_calc(pizza_size) + extra_top_cost_calc(extra_top_type) + special_top_cost_calc(spec_top_type)
+		puts bill
+		cost.push bill
+		cost.join("+")
+	end
 
 puts "Would you like this to be delivered for an extra 5 dollars? Yes or no"
 deliver = gets.chomp
