@@ -118,7 +118,6 @@ def extra_top_cost_calc(extra_toppings)
 	end
 end
 
-
 def salad_cost_calc(salad)
 	if salad == "caesar"
 		return 4
