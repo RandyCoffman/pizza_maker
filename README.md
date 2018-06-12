@@ -6,6 +6,7 @@ Installation:
 Open your computer terminal. Enter in terminal...
 
 $ git clone https://github.com/RandyCoffman/pizza_maker
+
 To Start The App:
 
 Enter in terminal in directory where app was cloned
